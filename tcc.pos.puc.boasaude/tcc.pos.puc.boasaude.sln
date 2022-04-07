@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Apresentacao", "4 - Apresentacao", "{1D45B948-BD73-48E3-B6EA-8ECA1024E74A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Service", "1 - Service", "{497E0BD8-29F8-4550-9941-5B3BD0C1FEE4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infra", "3 - Infra", "{40ED995C-791C-49AA-AE71-0153A4A62B68}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Dominio", "2 - Dominio", "{E15402F0-07E7-49CD-A8CD-232AD2059DF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tcc.pos.puc.boasaude.api", "src\4 -Apresentacao\tcc.pos.puc.boasaude.api\tcc.pos.puc.boasaude.api.csproj", "{F83465A7-2B3D-4A0D-9C65-3D45BAD7E0EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F83465A7-2B3D-4A0D-9C65-3D45BAD7E0EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F83465A7-2B3D-4A0D-9C65-3D45BAD7E0EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F83465A7-2B3D-4A0D-9C65-3D45BAD7E0EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F83465A7-2B3D-4A0D-9C65-3D45BAD7E0EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F83465A7-2B3D-4A0D-9C65-3D45BAD7E0EB} = {1D45B948-BD73-48E3-B6EA-8ECA1024E74A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {43BD924D-E10F-4FB4-80D9-ACAB42C87B46}
+	EndGlobalSection
+EndGlobal
