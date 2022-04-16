@@ -1,3 +1,7 @@
+using Microsoft.OpenApi.Models;
+using tcc.pos.puc.boasaude.api.Swagger;
+using tcc.pos.puc.boasaude.crosscutting;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,7 +9,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwagger();
+
+
+builder.Services.RegistrarDependecias();
 
 var app = builder.Build();
 
