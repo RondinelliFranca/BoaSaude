@@ -12,9 +12,10 @@ namespace tcc.pos.puc.boasaude.repository.Repository
     public class BoaSaudeRepository : IBoaSaudeRepository
     {
         private readonly ConfiguracaoDataBase configuracaoDataBase;
+        private const string connectString = @"Server=localhost;Database=BoaSaude;Trusted_Connection=True";
         public async Task<List<Associados>> BuscarAssociadosAsync()
         {
-            using var connection = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=BoaSaude;Trusted_Connection=True");
+            using var connection = new SqlConnection(connectString);
 
             try
             {
@@ -41,7 +42,7 @@ namespace tcc.pos.puc.boasaude.repository.Repository
 
         public async Task<Associados> BuscarAssociadosPorIdAsync(Guid id)
         {
-            using var connection = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=BoaSaude;Trusted_Connection=True");
+            using var connection = new SqlConnection(connectString);
 
             try
             {
@@ -76,7 +77,7 @@ namespace tcc.pos.puc.boasaude.repository.Repository
 
         public async Task<bool> CriarAssociadosAsync(AssociadoViewModel associadoViewModel)
         {
-            using var connection = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=BoaSaude;Trusted_Connection=True");
+            using var connection = new SqlConnection(connectString);
 
             try
             {
@@ -129,7 +130,7 @@ namespace tcc.pos.puc.boasaude.repository.Repository
 
         public async Task<bool> AtualizarAssociadosAsync(Associados associados, Guid idAssociado)
         {
-            using var connection = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=BoaSaude;Trusted_Connection=True");
+            using var connection = new SqlConnection(connectString);
 
             try
             {
@@ -166,7 +167,7 @@ namespace tcc.pos.puc.boasaude.repository.Repository
 
         public async Task<bool> DeletarAssociadoAsync(Guid idAssociado)
         {
-            using var connection = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=BoaSaude;Trusted_Connection=True");
+            using var connection = new SqlConnection(connectString);
 
             try
             {
@@ -190,7 +191,7 @@ namespace tcc.pos.puc.boasaude.repository.Repository
 
         public async Task<List<TipoPlano>> BuscarTipoPlanosAsync()
         {
-            using var connection = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=BoaSaude;Trusted_Connection=True");
+            using var connection = new SqlConnection(connectString);
 
             try
             {
@@ -211,7 +212,7 @@ namespace tcc.pos.puc.boasaude.repository.Repository
 
         public async Task<List<SituacaoPlano>> BuscarSituacaoPlanoAsync()
         {
-            using var connection = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=BoaSaude;Trusted_Connection=True");
+            using var connection = new SqlConnection(connectString);
 
             try
             {
@@ -232,7 +233,7 @@ namespace tcc.pos.puc.boasaude.repository.Repository
 
         public async Task<bool> Criar(Plano plano)
         {
-            using var connection = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=BoaSaude;Trusted_Connection=True");
+            using var connection = new SqlConnection(connectString);
 
             try
             {
@@ -272,7 +273,7 @@ namespace tcc.pos.puc.boasaude.repository.Repository
         {
             endereco.Id = Guid.NewGuid();
 
-            using var connection = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=BoaSaude;Trusted_Connection=True");
+            using var connection = new SqlConnection(connectString);
 
             try
             {
