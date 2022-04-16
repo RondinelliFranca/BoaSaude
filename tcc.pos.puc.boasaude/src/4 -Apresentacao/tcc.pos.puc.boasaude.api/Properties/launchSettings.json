@@ -1,4 +1,4 @@
-﻿{
+{
   "$schema": "https://json.schemastore.org/launchsettings.json",
   "iisSettings": {
     "windowsAuthentication": false,
@@ -11,14 +11,14 @@
   "profiles": {
     "tcc.pos.puc.boasaude.api": {
       "commandName": "Project",
-      "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "applicationUrl": "https://localhost:7096;http://localhost:5096",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "CONFIGURACAODATABASE": "{\"DbConnection\": \"Server=\"localhost\\SQLEXPRESS\";Database=BoaSaude;Integrated Security=True;\"}"
-      }
+        "CONFIGURACAODATABASE": "{\"Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=BoaSaude;Data Source=(local)\")}"
+      },
+      "applicationUrl": "https://localhost:7096;http://localhost:5096",
+      "dotnetRunMessages": true
     },
     "IIS Express": {
       "commandName": "IISExpress",

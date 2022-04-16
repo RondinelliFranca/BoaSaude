@@ -12,19 +12,23 @@ namespace tcc.pos.puc.boasaude.repository.Repository
     public class BoaSaudeRepository : IBoaSaudeRepository
     {
         private readonly ConfiguracaoDataBase configuracaoDataBase;
-        private const string connectString = @"Server=localhost;Database=BoaSaude;Trusted_Connection=True";
+        private const string connectString = @"Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=BoaSaude;Data Source=(local)";
         public async Task<List<Associados>> BuscarAssociadosAsync()
         {
             using var connection = new SqlConnection(connectString);
 
             try
             {
-                var query = @"SELECT *
-                                     [Id]
+                var query = @"SELECT
+                                    [Id]
                                     ,[IdEndereco]
                                     ,[IdPlano]
                                     ,[Nome]
                                     ,[DataNascimento]
+                                    ,[cpf]
+                                    ,[RG]
+                                    ,[NomeMae]
+                                    ,[NomePai]
                                 FROM[BoaSaude].[dbo].[Associados]";
                 connection.Open();
 
@@ -85,6 +89,7 @@ namespace tcc.pos.puc.boasaude.repository.Repository
 
                 associadoViewModel.Associados.IdEndereco = idEndereco;
                 associadoViewModel.Associados.Id = Guid.NewGuid();
+                associadoViewModel.Associados.IdPlano = Guid.Parse("3FA85F64-5717-4562-B3FC-2C963F66AFA5");
 
                 var sqlAssociados = @"INSERT INTO [dbo].[Associados]
                                                    ([Id]
@@ -272,6 +277,7 @@ namespace tcc.pos.puc.boasaude.repository.Repository
         private async Task<Guid> CriarEndereco(Endereco endereco)
         {
             endereco.Id = Guid.NewGuid();
+            endereco.IdTipoEndereco = Guid.Parse("711832AD-88F4-4D17-B2BF-D1E15A50C881");
 
             using var connection = new SqlConnection(connectString);
 

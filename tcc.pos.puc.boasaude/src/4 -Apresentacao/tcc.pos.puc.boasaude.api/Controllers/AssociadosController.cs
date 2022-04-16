@@ -6,7 +6,7 @@ using tcc.pos.puc.boasaude.domain.ModelView;
 namespace tcc.pos.puc.boasaude.api.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class AssociadosController : ControllerBase
     {
         private readonly IAssociadoService _service;
